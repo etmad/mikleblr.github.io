@@ -3,7 +3,12 @@
   var x = 0;
   setInterval( function(){
     x = x + 1;
-    $( "title" ).html("длина хуя "+x+ " см");
+    var s = "";
+    for (var i = 0; i < x; i++)
+      s = s + " ";
+    s = s +"8=э";
+    if (x > 10) x = 0;
+    $( "title" ).html(s);
   }
   , 1000)
 </script>
