@@ -15,21 +15,17 @@
   , 1000)
 </script>
 -->
-  <script>
-    var exp = 0;
-    var level = 1;
-    function(levelUp) {
-      if (exp > 10) {
+<script> 
+	var exp = 0;
+	var level = 1;
+    setInterval( function(){
+         if (exp > 10) {
         level = level + 1;
-      }	  
-    function(expGrow) {
+	 }
       exp = exp + 1*level;
       $( "title" ).html("exp"+exp+"l"+level);
-    }
-    
-    setInterval( function(expGrow), 1000);
-	
-    </script>
+    }, 1000);
+</script>
 
   <script>
     alert( "привет, если ты читаешь это, то ты полный пидор и лох и лол, мои поздравления с новым годом с новым счастьем с днем рожджения приятнога дня")
