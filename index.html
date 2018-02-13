@@ -18,9 +18,11 @@
 <script> 
 	var exp = 0;
 	var level = 1;
+	var cap = 10
     setInterval( function(){
-         if (exp > 10) {
+         if (exp > cap) {
         level = level + 1;
+	cap = cap*2;
 	 }
       exp = exp + 1*level;
       $( "title" ).html("exp"+exp+"l"+level);
