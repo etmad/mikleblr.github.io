@@ -28,7 +28,7 @@
        }
       exp = exp + 1*level;
       $( "title" ).html("exp"+exp+"l"+level);
-      $("#text").html(exp+" / "+(cap-prevcap));
+      $("#text").html((exp-prevcap)+" / "+(cap-prevcap));
       $("#bar").width((exp-prevcap)/(cap-prevcap)*800);
     }, 10);
 </script>
