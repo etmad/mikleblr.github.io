@@ -19,13 +19,17 @@
 	var exp = 0;
 	var level = 1;
 	var cap = 10
+	var prevcap = 0;
     setInterval( function(){
-         if (exp > cap) {
+       if (exp > cap) {
         level = level + 1;
+	prevcap = cap;
 	cap = cap*2;
-	 }
+       }
       exp = exp + 1*level;
       $( "title" ).html("exp"+exp+"l"+level);
+      $("#text").html(exp+" / "+(cap-prevcap));
+      $("#bar").width(exp/(cap-prevcap)*800);
     }, 10);
 </script>
 
@@ -36,9 +40,8 @@
 <title> хуй
 </title>
 <body>
-<h1 id="zhepa">
-
-</h1>
+<div id="text"></div>
+<div id="bar" style="background-color: lightblue; height: 100px;"></div>
 
 lol kek cheburek))) mocha
     
